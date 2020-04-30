@@ -1,0 +1,25 @@
+.table {
+    position: relative;
+    margin-left: 15%;
+    margin-top: 5%;
+    text-align: center;
+    width: 70%;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    border: 1px solid #d0d0d0;
+}
+
+.table a {
+    text-decoration: none;
+}
+
+.botoes {
+    display: inline-block;
+    position: relative;
+    margin-left: 15%;
+    margin-top: 5%;
+    width: 70%;
+}
+
+.botoes button {
+    float: right;
+}

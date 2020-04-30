@@ -1,0 +1,12 @@
+<nav class="nav-pagination">
+    <ul class="pagination justify-content-center">
+        <li class="page-item" [ngClass]="{'disabled' : !activePrevArrow}"><a class="page-link" (click)="prevNextPage('prev')">&laquo;</a></li>
+        <li *ngFor="let page of arrayPaginas" class="page-item" (click)="emitirPaginaClicada(page)">
+            <a class="page-link">
+					{{page + 1}}
+				</a>
+        </li>
+        <li class="page-item" [ngClass]="{'disabled' : !activeNextArrow}"><a class="page-link" (click)="prevNextPage('next')">&raquo;</a></li>
+        <li class="page-item"><a class="page-link">Pagina Atual : {{paginaAtualDisplay}}</a></li>
+    </ul>
+</nav>

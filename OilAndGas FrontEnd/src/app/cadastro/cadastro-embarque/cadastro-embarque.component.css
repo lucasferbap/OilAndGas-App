@@ -1,0 +1,42 @@
+.cadastroEmbarqueContent {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+    padding: 10px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    border: 1px solid #d0d0d0;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.dateTimePicker {
+    color: black;
+    width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+    border: 1px solid #d0d0d0;
+    padding: 10px;
+}
+
+.datePicker {
+    float: left;
+    margin-left: 25%;
+    margin-right: 10%;
+}
+
+.dateTimePicker p {
+    position: absolute;
+    left: 55%;
+}
+
+.msg {
+    float: left;
+    color: black;
+    width: 60%;
+    margin-top: 30px;
+    border: 1px solid #d0d0d0;
+    text-align: center;
+    padding: 0;
+}

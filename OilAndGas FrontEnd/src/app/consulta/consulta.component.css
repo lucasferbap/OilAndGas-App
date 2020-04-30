@@ -1,0 +1,28 @@
+.conteudo {
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10%;
+}
+
+.borda {
+    border-radius: 10px;
+    border: solid 2px lightblue;
+    padding: 5px;
+    margin-bottom: 30px;
+    margin-left: 4.16%;
+    margin-right: 4.16%;
+}
+
+.consultar {
+    width: 100%;
+    border: solid 2px lightblue;
+    border-radius: 10px;
+    padding: 10%;
+}
+
+.consultar:hover {
+    color: black;
+    background-color: lightblue;
+    cursor: pointer
+}

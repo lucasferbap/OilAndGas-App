@@ -1,0 +1,15 @@
+<div class="content" *ngIf="openClose" @fly>
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Selecione um funcionario para acessar os seus embarques</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let f of funcionarios.content">
+                <td><a (click)="openClose = false" routerLink="/embarques/consulta" [queryParams]="{id: f.id, nome: f.nome}">{{f.nome}}</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <app-paginacao [numeroPaginas]="funcionarios.totalPages" (paginaClicada)="findAllFuncionariosNomeId($event)"></app-paginacao>
+</div>

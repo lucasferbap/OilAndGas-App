@@ -1,0 +1,22 @@
+.form-empresa {
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+    margin-top: 50px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    border: 1px solid #d0d0d0;
+    padding: 15px;
+}
+
+.msgSucesso {
+    border-radius: 20px;
+    position: absolute;
+    top: 106px;
+    left: 25%;
+    text-align: center;
+    color: white;
+    width: 51%;
+    height: 39%;
+    background-color: rgba(0, 0, 0, 0.8);
+}

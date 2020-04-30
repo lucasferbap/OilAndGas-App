@@ -1,0 +1,21 @@
+.tableContent {
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    border: 1px solid #d0d0d0;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 5%;
+    margin-top: 10px;
+    width: 90%;
+}
+
+.botoes {
+    float: left;
+    margin-bottom: 100px;
+}
+
+.botoes button {
+    margin-right: 10px;
+}

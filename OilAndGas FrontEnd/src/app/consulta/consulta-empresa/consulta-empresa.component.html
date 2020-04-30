@@ -1,0 +1,25 @@
+<div class="tabelaEmpresas">
+    <p class="h4 text-primary">Empresas</p>
+    <table class="table table-striped tableContent table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">NOME</th>
+                <th scope="col">CNPJ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e of empresas.content">
+                <td>{{e.id}}</td>
+                <td>{{e.nome}}</td>
+                <td>{{e.cnpj}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<app-paginacao [numeroPaginas]="empresas.totalPages" (paginaClicada)="getAllEmpresas($event)"></app-paginacao>
+
+<div class="botao">
+    <button type="button" class="btn btn-primary" routerLink="/consulta">Voltar</button>
+</div>

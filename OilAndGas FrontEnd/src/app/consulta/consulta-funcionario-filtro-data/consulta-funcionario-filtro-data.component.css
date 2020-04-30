@@ -1,0 +1,50 @@
+.resultado-filtro {
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10%;
+    width: 100%;
+}
+
+.filtro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.calendario {
+    margin-top: 10%;
+}
+
+.btnFiltrar {
+    margin-top: 20px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.custom-day {
+    text-align: center;
+    padding: 0.185rem 0.25rem;
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    background-color: #e6e6e6;
+}
+
+.custom-day.focused {
+    background-color: #e6e6e6;
+}
+
+.custom-day.range,
+.custom-day:hover {
+    background-color: rgb(2, 117, 216);
+    color: white;
+}
+
+.custom-day.faded {
+    background-color: rgba(2, 117, 216, 0.5);
+}

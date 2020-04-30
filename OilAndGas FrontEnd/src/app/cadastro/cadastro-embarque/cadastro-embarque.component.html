@@ -1,0 +1,36 @@
+<div class="cadastroEmbarqueContent" *ngIf="openClose" @animateMsg>
+
+    <button *ngIf="embarqueOuDesembarque == 'true'; else elseBlock" type="button" class="btn btn-dark" style="float: right" (click)="toggleOpenClose()" routerLink="/embarques/consulta" [queryParams]="{id: idFuncionario, nome: nomeFuncionario}">X</button>
+    <ng-template #elseBlock>
+        <button type="button" class="btn btn-dark" style="float: right" (click)="toggleOpenClose()" routerLink="/embarques/consulta" [queryParams]="{id: idFuncionario, nome: nomeFuncionario}">X</button>
+    </ng-template>
+
+
+    <p class="h4 text-primary">
+        Cadastro de {{embarqueOuDesembarque == 'true' ? 'Embarque' : 'Desembarque'}}
+    </p>
+
+    <div>
+        Cadastrando o {{embarqueOuDesembarque == 'true' ? 'Embarque' : 'Desembarque'}} para o funcionario {{nomeFuncionario}}
+    </div>
+
+    <div class="dateTimePicker" (click)="animateResponseMsg = false">
+        <ngb-datepicker class="datePicker" #dp [(ngModel)]="model"></ngb-datepicker>
+
+        <ngb-timepicker class="timePicker" [(ngModel)]="time"></ngb-timepicker>
+        <p class="h6">
+            Data escolhida: {{ model.day
+            < 10 ? '0'+model.day : model.day }}/{{ model.month < 10 ? '0'+model.month : model.month }}/{{model.year}} <br>
+                Hora escolhida: {{ time.hour
+                < 10 ? '0'+time.hour : time.hour }} H : {{ time.minute < 10 ? '0'+time.minute : time.minute }} Min </p>
+    </div>
+
+    <button type="button" class="btn btn-primary" style="float: right; margin-top: 30px" (click)="cadastrarEmbarque(); toggleResponseMsg()">Casdastrar {{embarqueOuDesembarque == 'true' ? 'Embarque' : 'Desembarque'}}</button>
+
+    <div class="msg" @animateMsg *ngIf="animateResponseMsg">
+        <p *ngFor="let m of responseMsg">
+            {{m}}
+        </p>
+    </div>
+
+</div>

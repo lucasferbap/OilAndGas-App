@@ -1,0 +1,28 @@
+.tabelaEmpresas {
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    border: 1px solid #d0d0d0;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 5%;
+    margin-top: 10px;
+    width: 90%;
+}
+
+.text-primary {
+    float: left;
+}
+
+.paginacao {
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 25%;
+    width: 50%;
+}
+
+.botao {
+    float: right;
+    margin-top: 50px;
+    margin-right: 5%;
+}

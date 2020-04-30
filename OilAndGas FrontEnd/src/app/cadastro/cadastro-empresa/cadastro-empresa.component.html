@@ -1,0 +1,26 @@
+<div>
+    <form class="form-empresa col">
+        <p class="h4 text-primary">Cadastro de Empresas</p>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Nome</label>
+            <input [(ngModel)]="empresa.nome" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome da Empresa">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">CNPJ</label>
+            <input [(ngModel)]="empresa.cnpj" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="formGroupExampleInput2" placeholder="CNPJ">
+        </div>
+        <button style="float: right; margin-left: 5%" type="button" class="btn btn-primary" (click)="postEmpresa()">Cadastrar</button>
+    </form>
+
+    <div class="msgSucesso col" @slideInOut *ngIf="showMsg">
+        <button type="button" class="btn btn-dark" style="float: left" (click)="showResponseMsg()">X</button>
+        <div style="margin-top: 10%;">
+            <span class="h5" *ngFor="let m of msgSucesso">
+                {{m}}
+                <br>
+                <br>
+            </span>
+        </div>
+
+    </div>
+</div>

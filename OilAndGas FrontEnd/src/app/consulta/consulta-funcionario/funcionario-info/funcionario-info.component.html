@@ -1,0 +1,57 @@
+<div class="content">
+    <div class="foto">
+        <img width="100%" src="https://i0.wp.com/www.techcult.com.br/wp-content/uploads/2017/03/perfil-twitter.png?w=1024&ssl=1" />
+    </div>
+    <div class="info">
+        <p class="h4 text-primary">Nome: {{funcionario.nome}}</p>
+        <p class="h5 text-primary">
+            ID: {{funcionario.id}}
+            <br> Empresa: {{funcionario.empresa}}
+            <br> Gerente: {{funcionario.gerente}}
+            <br> Estado do Funcionario: {{funcionario.estadoFuncionario}}
+            <br> Cargo : {{funcionario.cargo}}
+        </p>
+    </div>
+
+
+    <div class="embarques">
+        <p class="h4 text-primary">Embarques</p>
+        <table class="table table-striped table-bordered" *ngIf=" embarques.content.length == 0; else elseBlock">
+            <thead>
+                <tr>
+                    <th scope="col">EMBARQUES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Não há embarques para o(a) funcionário(a) {{funcionario.nome}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <ng-template #elseBlock>
+            <table class="table table-striped table-bordered tableContent" style="text-align: center">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">DATA EMBARQUE</th>
+                        <th scope="col">HORA EMBARQUE</th>
+                        <th scope="col">DATA DESEMBARQUE</th>
+                        <th scope="col">HORA DESEMBARQUE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let e of embarques.content">
+                        <td>{{e.idEmbarque}}</td>
+                        <td>{{e.dataEmbarque}}</td>
+                        <td>{{e.horaEmbarque}}</td>
+                        <td>{{e.dataDesembarque}}</td>
+                        <td>{{e.horaDesembarque}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <app-paginacao [numeroPaginas]="embarques.totalPages" (paginaClicada)="getEmbarques($event)"></app-paginacao>
+        </ng-template>
+
+    </div>
+
+</div>
